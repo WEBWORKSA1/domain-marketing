@@ -1,0 +1,30 @@
+{
+ "_note": "Edit contest names, briefs, dates and prizes here, then rebuild. 'closes' is an ISO date; a contest whose date has passed is shown as closed.",
+ "contests": [
+  {
+   "id": "pitch-90",
+   "name": "The 90-word pitch",
+   "closes": "2027-01-31",
+   "brief": "Write the first outbound email for a domain you own or an invented one. Ninety words or fewer. It must say what you own, why it fits the reader, how a sale would work, and give an easy way to say no.",
+   "judged": "Clarity, honesty and whether a busy founder would reply.",
+   "prize": "The winning email is published with credit on this page and featured on the home page for a month. A cash prize is added whenever a sponsor or reader contributions fund one, and is announced here before entries close."
+  },
+  {
+   "id": "lander",
+   "name": "For-sale page of the season",
+   "closes": "2027-02-28",
+   "brief": "Build a for-sale page for a domain you own, with the builder on this site or by hand. Send the live address.",
+   "judged": "Does a first-time visitor on a phone understand it is for sale, see how to act, and trust the page, inside five seconds.",
+   "prize": "The winning page is featured in the for-sale page playbook with a link and credit. A cash prize is added whenever a sponsor or reader contributions fund one, and is announced here before entries close."
+  },
+  {
+   "id": "name-it",
+   "name": "Name the startup",
+   "closes": "2027-03-31",
+   "brief": "We describe an invented company in two sentences on this page each season. Propose one unregistered or owned-by-you domain for it, and one sentence on why.",
+   "judged": "The phone test, length, and fit with the brief. Names that lean on an existing trademark are disqualified.",
+   "prize": "The winning name and its author are credited on this page. A cash prize is added whenever a sponsor or reader contributions fund one, and is announced here before entries close."
+  }
+ ],
+ "season_brief": "A two-person company that helps independent bakeries take pre-orders online and plan the morning bake. Friendly, practical, not techy."
+}

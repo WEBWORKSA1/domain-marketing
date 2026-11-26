@@ -1,0 +1,237 @@
+{
+ "_note": "Fees as published on each company's own pages on the read date. 'rate' values feed the net-proceeds calculator; a venue with no published rate on the page we read has no modes and is left out of the calculator. Review quarterly.",
+ "read": "2026-11-26",
+ "venues": [
+  {
+   "id": "sedo",
+   "name": "Sedo",
+   "kind": "Marketplace",
+   "best": "The widest international reach. Priced names are also offered through its registrar partner network.",
+   "fees": "10% when the name has a buy-now price and is parked or uses Sedo's sales page; 15% for make-offer or auction; 20% when the buyer comes through the partner network. A 3% transfer-only service exists for deals you close yourself.",
+   "modes": [
+    {
+     "label": "Buy now, parked or on Sedo's sales page, sold direct",
+     "rate": 10
+    },
+    {
+     "label": "Make offer or auction, sold direct",
+     "rate": 15
+    },
+    {
+     "label": "Sold through the partner network",
+     "rate": 20
+    }
+   ],
+   "url": "https://sedo.com/us/what-we-offer/buy-park-sell",
+   "source": "Sedo 'Buy, Park, Sell' page; DomainGang's breakdown of Sedo's own fee explanation"
+  },
+  {
+   "id": "afternic",
+   "name": "Afternic",
+   "kind": "Marketplace network",
+   "best": "Puts priced names in front of people searching at partner registrars, with in-house brokers and a lead centre for inquiries.",
+   "fees": "No commission figure is stated on the brokerage page we read. Check the current fee schedule in your account before you list.",
+   "modes": [],
+   "url": "https://www.afternic.com/domain-broker",
+   "source": "Afternic domain brokerage page"
+  },
+  {
+   "id": "saw",
+   "name": "Saw.com",
+   "kind": "Marketplace and brokerage",
+   "best": "Self-serve for-sale pages with live chat and lease-to-own built in, with brokers available when a deal needs one.",
+   "fees": "9% self-service; 15% full-service brokerage.",
+   "modes": [
+    {
+     "label": "Self-service",
+     "rate": 9
+    },
+    {
+     "label": "Full-service brokerage",
+     "rate": 15
+    }
+   ],
+   "url": "https://saw.com/sell",
+   "source": "Saw.com seller page"
+  },
+  {
+   "id": "dynadot",
+   "name": "Dynadot",
+   "kind": "Registrar marketplace",
+   "best": "Low-friction listings and auctions for names already held at the registrar, plus expired-name auctions for buyers.",
+   "fees": "10% on user listings and auctions; 5% when the sale completes through a Pay Link. Inbound brokerage 10% (minimum $50); outbound brokerage for ultra-premium names 15%.",
+   "modes": [
+    {
+     "label": "User listing or auction",
+     "rate": 10
+    },
+    {
+     "label": "Pay Link, when you bring the buyer",
+     "rate": 5
+    },
+    {
+     "label": "Inbound brokerage",
+     "rate": 10,
+     "min": 50
+    },
+    {
+     "label": "Outbound brokerage, ultra-premium names",
+     "rate": 15
+    }
+   ],
+   "url": "https://www.dynadot.com/market",
+   "source": "Dynadot aftermarket page and brokerage help article"
+  },
+  {
+   "id": "namecheap",
+   "name": "Namecheap Market",
+   "kind": "Registrar marketplace",
+   "best": "Budget and mid-priced names listed straight from a Namecheap account in a few clicks.",
+   "fees": "Flat 10% per transaction. Asking prices from $5 to $1,000,000.",
+   "modes": [
+    {
+     "label": "Buy-now listing",
+     "rate": 10
+    }
+   ],
+   "url": "https://www.namecheap.com/support/knowledgebase/article.aspx/359/15/how-do-i-sell-my-domain-on-namecheap-market/",
+   "source": "Namecheap knowledge-base article on listing a domain"
+  },
+  {
+   "id": "spaceship",
+   "name": "Spaceship SellerHub",
+   "kind": "Registrar marketplace",
+   "best": "Sellers who want modern for-sale pages, lease-to-own and names imported from any registrar.",
+   "fees": "10% per sale; 5% on checkout and self-serve links, according to the SellerHub FAQ text. The page itself did not load for us on the read date, so confirm on the site.",
+   "modes": [
+    {
+     "label": "Marketplace sale",
+     "rate": 10
+    },
+    {
+     "label": "Checkout or self-serve link",
+     "rate": 5
+    }
+   ],
+   "url": "https://www.spaceship.com/sellerhub/",
+   "source": "Spaceship SellerHub FAQ text as shown in search results"
+  },
+  {
+   "id": "flippa",
+   "name": "Flippa",
+   "kind": "Marketplace",
+   "best": "Names with a story: an old site, traffic or revenue attached. Buyers there shop for businesses as well as names.",
+   "fees": "Listing packages from $29, plus a success fee of 3% to 10% depending on the value of the asset.",
+   "modes": [
+    {
+     "label": "Success fee, at most (falls towards 3% on larger assets; listing package from $29 extra)",
+     "rate": 10
+    }
+   ],
+   "url": "https://flippa.com/domains",
+   "source": "Flippa domains page"
+  },
+  {
+   "id": "atom",
+   "name": "Atom",
+   "kind": "Curated brandable marketplace",
+   "best": "Coined, brandable names. Accepted listings are shown at a fixed price with logo files, and many carry a payment plan.",
+   "fees": "No seller commission is stated on the page we read. Check the seller terms before you submit names.",
+   "modes": [],
+   "url": "https://www.atom.com/",
+   "source": "Atom marketplace listing page (formerly Squadhelp)"
+  },
+  {
+   "id": "brandbucket",
+   "name": "BrandBucket",
+   "kind": "Curated brandable marketplace",
+   "best": "Startup-style brandables sold at a fixed price with a sample logo. Listings we saw ran from about $1,500 to $8,400.",
+   "fees": "Seller terms are not stated on the page we read.",
+   "modes": [],
+   "url": "https://www.brandbucket.com/",
+   "source": "BrandBucket home page"
+  },
+  {
+   "id": "broker",
+   "name": "An independent broker",
+   "kind": "Brokerage",
+   "best": "High-value names where finding and persuading one specific buyer is the whole job.",
+   "fees": "Usually a percentage of the sale price, commonly 10% to 20%, and almost always with an exclusivity period.",
+   "modes": [
+    {
+     "label": "Commission, low end",
+     "rate": 10
+    },
+    {
+     "label": "Commission, high end",
+     "rate": 20
+    }
+   ],
+   "url": "https://domaininvesting.com/guide/list-of-domain-brokers/",
+   "source": "DomainInvesting.com guide to domain brokers"
+  },
+  {
+   "id": "escrow",
+   "name": "Escrow.com",
+   "kind": "Escrow for direct deals",
+   "best": "Closing a sale you found yourself. The buyer pays the escrow company, the name moves, then you are paid.",
+   "fees": "2.6% (minimum $50) on domains up to $5,000, falling in steps to 0.7% above $10 million. The concierge service starts at 5.2% (minimum $100).",
+   "modes": [
+    {
+     "label": "Your own buyer, standard escrow",
+     "rate": 2.6,
+     "min": 50,
+     "cap": 5000
+    },
+    {
+     "label": "Your own buyer, concierge escrow",
+     "rate": 5.2,
+     "min": 100,
+     "cap": 5000
+    }
+   ],
+   "url": "https://www.escrow.com/domains",
+   "source": "Escrow.com domains page"
+  },
+  {
+   "id": "own",
+   "name": "Your own for-sale page",
+   "kind": "Direct",
+   "best": "Keeps the buyer relationship and the margin with you. You do the marketing; an escrow service handles the money.",
+   "fees": "No commission. Budget for the escrow fee on the deal.",
+   "modes": [],
+   "url": "tools/lander-builder.html",
+   "source": "Build one with the for-sale page builder on this site"
+  },
+  {
+   "id": "forum",
+   "name": "Investor communities",
+   "kind": "Investor-to-investor",
+   "best": "Moving names quickly to other investors at wholesale prices, using standard sale templates and trader ratings.",
+   "fees": "Expect investor pricing, a fraction of what an end user would pay.",
+   "modes": [],
+   "url": "https://www.namepros.com/threads/domain-auctions-guide.861616/",
+   "source": "NamePros domain auctions guide"
+  },
+  {
+   "id": "domaineasy",
+   "name": "DomainEasy",
+   "kind": "Financing",
+   "best": "Offering a buyer monthly payments. It publishes three structures: lease-to-own for $1,000 to $50,000 names, a deposit plan for $50,000 to $500,000, and a balloon plan above that.",
+   "fees": "Seller pricing is managed in the seller dashboard and is not listed on the financing page.",
+   "modes": [],
+   "url": "https://domaineasy.com/financing",
+   "source": "DomainEasy financing page"
+  },
+  {
+   "id": "efty",
+   "name": "Efty",
+   "kind": "Portfolio platform",
+   "best": "Investors who want their own branded storefront, for-sale pages and portfolio tracking in one place.",
+   "fees": "No pricing is shown on the product page we read.",
+   "modes": [],
+   "url": "https://www.efty.com/products/efty_investor/",
+   "source": "Efty Investor product page"
+  }
+ ]
+}

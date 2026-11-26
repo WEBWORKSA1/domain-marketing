@@ -1,0 +1,10 @@
+{
+ "_note": "Reference figures maintained by hand. Each carries its source and the date it was read. Review when the source publishes a new edition.",
+ "read": "2026-11-26",
+ "facts": [
+  {"k": "Domain names registered worldwide", "v": "411.6 million", "x": "End of Q3 2026, all extensions. Up 9.9 million on the quarter and 33.0 million (8.7%) on the year.", "s": "Domain Name Industry Brief, via the Verisign blog", "u": "https://blog.verisign.com/"},
+  {"k": "Largest reported sale of 2026 so far", "v": "$99 million", "x": "Shop.com, a private sale, on the year-to-date chart through November 15, 2026.", "s": "DNJournal year-to-date top 100", "u": "https://dnjournal.com/ytd-sales-charts.htm"},
+  {"k": "Second largest", "v": "$70 million", "x": "AI.com. Club.com ($10 million), Green.com ($7.5 million) and Tokens.com ($5 million) complete the top five.", "s": "DNJournal year-to-date top 100", "u": "https://dnjournal.com/ytd-sales-charts.htm"},
+  {"k": "Wholesale price of a .com", "v": "$10.97", "x": "From November 1, 2026, up from $10.26, before the ICANN fee and your registrar's margin.", "s": "As reported by Bill Hartzer, August 2026", "u": "https://www.billhartzer.com/?p=18461"}
+ ]
+}
