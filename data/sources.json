@@ -1,5 +1,5 @@
 {
- "_note": "Daily auto-refresh sources. A failing source is logged and skipped; its previous items are kept. Only the headline, link, source name and date are stored.",
+ "_note": "Daily auto-refresh sources. A failing source is logged in data/refresh-log.json and skipped; its previous items are kept. Only the headline, link, source name and date are stored. Videos: recent uploads from the channels behind the curated library, kept only if the title matches video_include and not video_exclude.",
  "feeds": [
   {
    "name": "Domain Name Wire",
@@ -54,18 +54,8 @@
  "per_feed": 8,
  "keep": 80,
  "max_age_days": 75,
- "video_keywords": [
-  "domain",
-  "domains",
-  "domaining",
-  "tld",
-  "registrar",
-  "backorder",
-  "brandable",
-  "aftermarket",
-  "whois",
-  "dns",
-  "expired"
- ],
- "video_latest_keep": 24
+ "video_latest_keep": 24,
+ "video_include": "\\b(domains?|domaining|domainers?|tlds?|backorders?|brandable|aftermarket)\\b",
+ "video_exclude": "\\b(error|fix|email|mailbox|hosting|wordpress|cloudflare|subdomains?|dns|ssl|cli|api|deploy)\\b",
+ "video_max_age_days": 300
 }

@@ -17,7 +17,8 @@ Static site for GitHub Pages (`main` branch, repository root). AdSense publisher
 | `build/content_tools.py` | Tool pages: form markup, how-it-works text, FAQs. |
 | `build/content_pages.py` | Glossary, daily drills, roles, privacy, terms, disclosure, about. |
 | `scripts/update_feeds.py` | Daily refresh of headlines and videos. Fault tolerant; never fails the run. |
-| `.github/workflows/auto-refresh.yml` | Runs on push, daily at 06:23 UTC and on demand: refresh, rebuild, commit, deploy. |
+| `.github/workflows/auto-refresh.yml` | Runs on push, daily at 06:23 UTC and on demand: refresh, rebuild, commit. Publishing follows the repository's Pages source (branch or GitHub Actions). |
+| `data/refresh-log.json` | What each news feed and video channel returned on the last run. Check it when a source goes quiet. |
 | `data/venues.json` | Venues and published fees, with sources and the date read. Feeds the calculator, the plan builder and the venue table. |
 | `data/stats.json` | Reference numbers shown on the home page and market wire, each with its source. |
 | `data/contests.json` | Contest names, briefs, closing dates and prizes. |
@@ -40,6 +41,13 @@ Static site for GitHub Pages (`main` branch, repository root). AdSense publisher
 
 Pushing to `main` triggers the workflow, which rebuilds and deploys, so a rebuild on your own
 machine is optional.
+
+## GitHub Pages
+
+Settings > Pages > Source: **Deploy from a branch**, branch `main`, folder `/ (root)`. GitHub
+then publishes `main` after every push, including the daily refresh commit. If the source is
+set to "GitHub Actions" instead, the workflow's deploy job publishes the build. The workflow
+cannot switch Pages on by itself; that one setting has to be saved in the repository.
 
 ## Custom domain
 

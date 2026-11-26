@@ -171,14 +171,15 @@ def refresh_videos(src, old):
         status, name, url = oembed(v["id"])
         if status == "ok":
             v["ch"], v["au"], v["f"] = name or v.get("ch", ""), url or v.get("au", ""), 0
-        elif status == "gone":
-            v["f"] = int(v.get("f", 0)) + 1
-            log.append(f"GONE {v['id']} ({v['f']}x)")
-        if int(v.get("f", 0)) < 2:  # two consecutive failures retire a video
-            library.append(v)
+        elif status == "gone":  # removed, private or not embeddable: retire it
+            log.append(f"GONE {v['id']} {v.get('t', '')[:50]}")
+            continue
+        library.append(v)
     log.append(f"OK   library: {len(library)} of {len(old.get('library', []))} playable")
 
-    kws = [k.lower() for k in src.get("video_keywords", ["domain"])]
+    want = re.compile(src.get("video_include", r"\bdomain(s|ing|er|ers)?\b"), re.I)
+    skip = re.compile(src.get("video_exclude", r"(?!x)x"), re.I)
+    oldest = (NOW - datetime.timedelta(days=int(src.get("video_max_age_days", 300)))).isoformat(timespec="seconds")
     lib_ids = {v["id"] for v in library}
     latest, seen_ch = [], set()
     for v in library:
@@ -202,17 +203,18 @@ def refresh_videos(src, old):
                 low = title.lower()
                 if not re.match(r"^[\w-]{11}$", vid) or vid in lib_ids or "/shorts/" in href or "#shorts" in low:
                     continue
-                if not any(k in low for k in kws):
+                when = iso(e.findtext("a:published", "", NS))
+                if not want.search(title) or skip.search(title) or (when and when < oldest):
                     continue
-                latest.append({"id": vid, "t": title, "ch": v.get("ch", ""), "d": iso(e.findtext("a:published", "", NS))})
+                latest.append({"id": vid, "t": title, "ch": v.get("ch", ""), "d": when})
                 n += 1
                 if n >= 3:
                     break
             log.append(f"OK   channel {v.get('ch')}: {n}")
         except Exception as ex:
             log.append(f"FAIL channel {v.get('ch')}: {type(ex).__name__}: {ex}")
-    if not latest:
-        latest = old.get("latest", [])  # keep yesterday's list on a bad day
+    if not latest and not any(l.startswith("OK   channel") for l in log):
+        latest = old.get("latest", [])  # every channel failed: keep yesterday's list
     dedup, ids = [], set()
     for v in sorted(latest, key=lambda x: x.get("d", ""), reverse=True):
         if v["id"] not in ids:
@@ -225,10 +227,12 @@ def refresh_videos(src, old):
 def main():
     src = load("sources.json", {})
     stamp = NOW.isoformat(timespec="seconds")
+    report = {"at": stamp, "news": [], "videos": []}
     try:
         old_news = load("news.json", {"items": []})
         items, log, got = refresh_news(src, old_news)
         print("\n".join(["NEWS"] + log))
+        report["news"] = log
         if items:
             save("news.json", {"updated": stamp if got else old_news.get("updated", stamp), "items": items})
     except Exception as ex:  # never fail the workflow
@@ -237,10 +241,15 @@ def main():
         old_v = load("videos.json", {"library": [], "latest": []})
         library, latest, log = refresh_videos(src, old_v)
         print("\n".join(["VIDEOS"] + log))
+        report["videos"] = log
         if library:
             save("videos.json", {"updated": stamp, "library": library, "latest": latest})
     except Exception as ex:
         print("VIDEOS step failed:", ex)
+    try:
+        save("refresh-log.json", report)  # what each source did on the last run
+    except Exception:
+        pass
     return 0
 
 

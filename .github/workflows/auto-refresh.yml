@@ -1,5 +1,10 @@
 name: Auto-refresh & deploy
 
+# Refreshes headlines and videos, rebuilds every page and commits the result to main.
+# Publishing follows whichever GitHub Pages source the repository uses:
+#   - "Deploy from a branch" (main, root): GitHub publishes main after each push.
+#   - "GitHub Actions": the deploy job below publishes the build.
+
 on:
   push:
     branches: [main]
@@ -17,12 +22,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  refresh-and-deploy:
+  refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    timeout-minutes: 15
+    outputs:
+      pages: ${{ steps.pages.outputs.type }}
     steps:
       - uses: actions/checkout@v4
 
@@ -37,21 +41,57 @@ jobs:
         run: python3 build/build.py
 
       - name: Commit refreshed content
+        id: commit
         run: |
           git config user.name "domain-marketing-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           if git diff --cached --quiet; then
             echo "No content changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "Auto-refresh: headlines, videos and pages ($(date -u +%Y-%m-%d))"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Check how GitHub Pages is set up
+        id: pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          type=$(gh api "repos/${GITHUB_REPOSITORY}/pages" --jq '.build_type' 2>/dev/null || true)
+          if [ -z "$type" ] || [ "$type" = "null" ]; then type=none; fi
+          echo "type=$type" >> "$GITHUB_OUTPUT"
+          case "$type" in
+            workflow)
+              echo "Pages source: GitHub Actions. The deploy job publishes this build." ;;
+            legacy)
+              echo "Pages source: branch. GitHub publishes main after each push."
+              if [ "${{ steps.commit.outputs.changed }}" = "true" ]; then
+                gh api -X POST "repos/${GITHUB_REPOSITORY}/pages/builds" >/dev/null 2>&1 \
+                  && echo "Requested a Pages build for the refresh commit." \
+                  || echo "Could not request a build; GitHub will publish on the next push."
+              fi ;;
+            *)
+              echo "::warning::GitHub Pages is not enabled for this repository yet. Settings > Pages > Source: Deploy from a branch > main / (root)." ;;
+          esac
+
+  deploy:
+    needs: refresh
+    if: needs.refresh.outputs.pages == 'workflow'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
