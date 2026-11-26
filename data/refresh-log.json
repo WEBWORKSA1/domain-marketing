@@ -1,20 +1,15 @@
 {
- "at": "2026-11-26T10:36:04+00:00",
+ "at": "2026-11-26T10:37:58+00:00",
  "news": [
   "OK   Domain Name Wire: 5",
   "OK   DomainInvesting.com: 5",
   "OK   Domain Incite: 8",
   "OK   DomainGang: 8",
-  "FAIL TheDomains: ParseError: XML or text declaration not at start of entity: line 4, column 0",
-  "FAIL Morgan Linton: HTTPError: HTTP Error 404: Not Found",
-  "FAIL Verisign Blog: ParseError: not well-formed (invalid token): line 1, column 99",
-  "OK   InterNetX Snapshot: 0",
-  "OK   Bill Hartzer: 1",
-  "OK   NamesCon: 0"
+  "OK   TheDomains: 5",
+  "OK   Bill Hartzer: 1"
  ],
  "videos": [
-  "GONE w1ZZI99gxLA How We Determine a Domain's Value",
-  "OK   library: 30 of 31 playable",
+  "OK   library: 30 of 30 playable",
   "OK   channel GoDaddy Domain Academy: 3",
   "OK   channel TechGalDiaries: 0",
   "OK   channel Side Tracked Simon: 0",
@@ -25,7 +20,7 @@
   "OK   channel MediaOptions: 0",
   "OK   channel StartupClub: 0",
   "OK   channel NamesBrun: 3",
-  "OK   channel PG Tech Help: 3",
+  "OK   channel PG Tech Help: 2",
   "OK   channel Hartzer Consulting, LLC: 0",
   "OK   channel Dynadot: 3",
   "OK   channel Domain Manage: 0",
