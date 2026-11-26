@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T10:29:28+00:00",
+ "updated": "2026-11-26T10:36:04+00:00",
  "library": [
   {
    "id": "OdFs8ARS-Hk",
@@ -80,12 +80,6 @@
    "ch": "MediaOptions",
    "au": "https://www.youtube.com/@mediaoptions1678",
    "f": 0
-  },
-  {
-   "id": "w1ZZI99gxLA",
-   "t": "How We Determine a Domain's Value",
-   "c": "pricing",
-   "f": 1
   },
   {
    "id": "4-mHP0Yy-Hc",
@@ -250,22 +244,16 @@
  ],
  "latest": [
   {
-   "id": "1lBOn_uq9rI",
-   "t": "How To Shorten a Cloudflare Subdomain URL (Step-by-Step Guide)",
-   "ch": "PG Tech Help",
-   "d": "2026-11-21T16:30:13+00:00"
-  },
-  {
    "id": "0QCYIFcFO7A",
    "t": "How To Enable Fast Transfer In BigRock and Sell Your Domain To Afternic or Sedo?",
    "ch": "PG Tech Help",
    "d": "2026-11-13T16:00:18+00:00"
   },
   {
-   "id": "DR_jSTo5GyE",
-   "t": "How To Fix DNS_PROBE_FINISHED_NO_INTERNET Error in Google Chrome?",
+   "id": "C6nJ4CENJRc",
+   "t": "Sedo Domains Not Selling? How To Enable Fast Transfer for Quick Sales",
    "ch": "PG Tech Help",
-   "d": "2026-11-12T20:31:09+00:00"
+   "d": "2026-11-12T08:10:47+00:00"
   },
   {
    "id": "LcmoZJ33ZJ4",
@@ -280,22 +268,16 @@
    "d": "2026-11-09T22:35:36+00:00"
   },
   {
+   "id": "uX1La_UyFg8",
+   "t": "How To Get .Com Domain Free For 1 Year (Showing Live How To Get Free Domain)",
+   "ch": "PG Tech Help",
+   "d": "2026-11-06T16:00:27+00:00"
+  },
+  {
    "id": "v9usndb1n7Q",
    "t": "How to Bulk Search & Save Domain listss FAST with GoDaddy Tools",
    "ch": "GoDaddy Domain Academy",
    "d": "2026-10-22T20:21:45+00:00"
-  },
-  {
-   "id": "WgeMH6Z2mDM",
-   "t": "Build & Deploy a Website with AI: Domain, Hosting & Business Email via GoDaddy CLI",
-   "ch": "GoDaddy",
-   "d": "2026-10-14T16:00:18+00:00"
-  },
-  {
-   "id": "6ijhwr1s1v0",
-   "t": "GoDaddy CLI for Email: Full Domain & Mailbox Setup with Claude Code",
-   "ch": "GoDaddy",
-   "d": "2026-10-08T16:00:33+00:00"
   },
   {
    "id": "xU_XvW0AdBM",
@@ -334,12 +316,6 @@
    "d": "2026-09-24T19:24:12+00:00"
   },
   {
-   "id": "DczFlnBWTuM",
-   "t": "GoDaddy Developer API: Managing Domains with the Command Line Tool",
-   "ch": "GoDaddy",
-   "d": "2026-08-27T14:14:29+00:00"
-  },
-  {
    "id": "LC6DJlaq4pg",
    "t": "Domain Expiration Explained: How to Keep Your Domain",
    "ch": "Dynadot",
@@ -356,42 +332,6 @@
    "t": "Domain Management Tips: How to Easily Export Your Domains from Dynadot",
    "ch": "Dynadot",
    "d": "2026-02-26T00:58:52+00:00"
-  },
-  {
-   "id": "DMFv0SKMsCU",
-   "t": "Your domain name is limiting your growth!",
-   "ch": "Chris Zuiker - Domain Name Broker",
-   "d": "2025-10-15T17:45:00+00:00"
-  },
-  {
-   "id": "trGQcWBgDig",
-   "t": "Why you need to price your domain based on the market value..",
-   "ch": "Chris Zuiker - Domain Name Broker",
-   "d": "2025-03-18T14:40:28+00:00"
-  },
-  {
-   "id": "Jdf8sVchPbs",
-   "t": "Domain Flipping: How to Sell Domain Names Using Outbound Sales & Pitchbox: Full Details with Results",
-   "ch": "Hartzer Consulting, LLC",
-   "d": "2025-03-14T20:26:00+00:00"
-  },
-  {
-   "id": "sTbGB1Zsr0s",
-   "t": "Digital Marketing Sidegig: Selling Domain Names",
-   "ch": "Hartzer Consulting, LLC",
-   "d": "2025-03-14T20:22:27+00:00"
-  },
-  {
-   "id": "ByO3Zl7O7rw",
-   "t": "How to Flip Domain Names Using Outbound Sales & Pitchbox",
-   "ch": "Hartzer Consulting, LLC",
-   "d": "2025-03-14T20:20:23+00:00"
-  },
-  {
-   "id": "MPHXjmmyA9Y",
-   "t": "Why you must seize the opportunity to acquire your domain name.",
-   "ch": "Chris Zuiker - Domain Name Broker",
-   "d": "2025-02-03T18:12:00+00:00"
   }
  ]
 }
