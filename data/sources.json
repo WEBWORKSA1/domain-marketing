@@ -22,33 +22,11 @@
    "url": "https://www.thedomains.com/feed/"
   },
   {
-   "name": "Morgan Linton",
-   "url": "https://www.morganlinton.com/feed/"
-  },
-  {
-   "name": "Verisign Blog",
-   "url": "https://blog.verisign.com/feed/",
-   "must": [
-    "domain",
-    "dns",
-    "registr",
-    "tld"
-   ]
-  },
-  {
-   "name": "InterNetX Snapshot",
-   "url": "https://snapshot.internetx.com/en/feed/"
-  },
-  {
    "name": "Bill Hartzer",
    "url": "https://www.billhartzer.com/feed/",
    "must": [
     "domain"
    ]
-  },
-  {
-   "name": "NamesCon",
-   "url": "https://namescon.com/feed/"
   }
  ],
  "per_feed": 8,
@@ -56,6 +34,6 @@
  "max_age_days": 75,
  "video_latest_keep": 24,
  "video_include": "\\b(domains?|domaining|domainers?|tlds?|backorders?|brandable|aftermarket)\\b",
- "video_exclude": "\\b(error|fix|email|mailbox|hosting|wordpress|cloudflare|subdomains?|dns|ssl|cli|api|deploy)\\b",
+ "video_exclude": "\\b(error|fix|email|mailbox|hosting|wordpress|cloudflare|subdomains?|dns|ssl|cli|api|deploy|free)\\b",
  "video_max_age_days": 300
 }

@@ -77,6 +77,10 @@ def ok_url(u):
 
 # ----------------------------------------------------------------------------- news
 def parse_feed(raw):
+    raw = raw.lstrip(b"\xef\xbb\xbf \t\r\n")  # some feeds ship blank lines or a BOM before the XML declaration
+    if not raw.startswith(b"<"):
+        cut = min([i for i in (raw.find(b"<?xml"), raw.find(b"<rss"), raw.find(b"<feed")) if i >= 0] or [0])
+        raw = raw[cut:]
     root = ET.fromstring(raw)
     out = []
     for e in root.iter("item"):
