@@ -1,9 +1,9 @@
 {
- "at": "2026-11-27T16:51:31+00:00",
+ "at": "2026-11-28T15:43:20+00:00",
  "news": [
-  "OK   Domain Name Wire: 5",
+  "FAIL Domain Name Wire: HTTPError: HTTP Error 415: Unsupported Media Type",
   "OK   DomainInvesting.com: 5",
-  "OK   Domain Incite: 8",
+  "FAIL Domain Incite: HTTPError: HTTP Error 415: Unsupported Media Type",
   "OK   DomainGang: 8",
   "OK   TheDomains: 5",
   "OK   Bill Hartzer: 1"
